@@ -16,6 +16,9 @@ const refs = {
 
 const onFormSubmit = (e) => {
     e.preventDefault();
+    if (localStorageValues.email === '' || localStorageValues.message === '') {
+        return
+    }
     if (localStorage.getItem(STORAGE_KEY)) {
         console.log(localStorage.getItem(STORAGE_KEY))
     }
